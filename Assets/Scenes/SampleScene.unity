@@ -396,6 +396,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1073804166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4490302565791019165, guid: f26add0b8561051438426890f3bd0f19, type: 3}
+  m_PrefabInstance: {fileID: 1737578515}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1270046987 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1802767607664207933, guid: f26add0b8561051438426890f3bd0f19, type: 3}
+  m_PrefabInstance: {fileID: 1737578515}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1481151842
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,6 +521,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1481151843}
     m_Modifications:
+    - target: {fileID: 3643882369342148042, guid: f26add0b8561051438426890f3bd0f19, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3826672958807468583, guid: f26add0b8561051438426890f3bd0f19, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -555,11 +569,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4490302565791019162, guid: f26add0b8561051438426890f3bd0f19, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4490302565791019165, guid: f26add0b8561051438426890f3bd0f19, type: 3}
       propertyPath: m_Name
       value: Rocket Launcher
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7709213088582071546, guid: f26add0b8561051438426890f3bd0f19, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2205214468985690845, guid: f26add0b8561051438426890f3bd0f19, type: 3}
+    - {fileID: 4490302565791019162, guid: f26add0b8561051438426890f3bd0f19, type: 3}
+    - {fileID: 3643882369342148042, guid: f26add0b8561051438426890f3bd0f19, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f26add0b8561051438426890f3bd0f19, type: 3}
 --- !u!1 &1756281550
 GameObject:
@@ -612,7 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterController: {fileID: 0}
-  movingSpeed: 2
+  movingSpeed: 5
 --- !u!136 &1756281553
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -785,6 +810,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3826672958807468583, guid: f26add0b8561051438426890f3bd0f19, type: 3}
   m_PrefabInstance: {fileID: 1737578515}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1967256552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073804166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a81b17142b0a24d8f64c27e964d934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocket: {fileID: 1270046987}
+  flyRocket: {fileID: 4092872357349286730, guid: fb73cadbc19d1194fa25fecc07039117, type: 3}
 --- !u!1 &1976981774 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1078868141710040, guid: db58b1eda8133c84983d20108c13888e, type: 3}

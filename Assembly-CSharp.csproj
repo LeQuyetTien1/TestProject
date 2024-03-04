@@ -59,6 +59,8 @@
   <ItemGroup>
     <Compile Include="Assets\Script\MoveByKey.cs" />
     <Compile Include="Assets\Script\RotateByMouse.cs" />
+    <Compile Include="Assets\Script\RocketController.cs" />
+    <Compile Include="Assets\Script\RocketBullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
