@@ -346,6 +346,8 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
+"Assets/Script/DestroyExplosion.cs"
+"Assets/Script/GunAmmo.cs"
 "Assets/Script/MoveByKey.cs"
 "Assets/Script/RocketBullet.cs"
 "Assets/Script/RocketController.cs"

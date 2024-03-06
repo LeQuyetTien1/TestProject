@@ -6,6 +6,7 @@ public class RocketController : MonoBehaviour
 {
     public GameObject rocket;
     public GameObject flyRocket;
+    public GunAmmo gunAmmo;
     private float time = 0;
     void Update()
     {
@@ -19,6 +20,7 @@ public class RocketController : MonoBehaviour
             rocket.SetActive(false);
             time = 0;
             BulletSpawn();
+            gunAmmo.SingleFireAmmoCounter();
         }
     }
     public void Reload()

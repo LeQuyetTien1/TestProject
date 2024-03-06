@@ -61,6 +61,8 @@
     <Compile Include="Assets\Script\RotateByMouse.cs" />
     <Compile Include="Assets\Script\RocketController.cs" />
     <Compile Include="Assets\Script\RocketBullet.cs" />
+    <Compile Include="Assets\Script\DestroyExplosion.cs" />
+    <Compile Include="Assets\Script\GunAmmo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
