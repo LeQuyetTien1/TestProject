@@ -29,6 +29,7 @@ public class GunAmmo : MonoBehaviour
     {
         LockShooting();
         RefillAmmo();
+        Debug.Log($"ammo: {loadedAmmo}");
     }
     void Start()
     {
@@ -38,7 +39,7 @@ public class GunAmmo : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             Reload();
         }
