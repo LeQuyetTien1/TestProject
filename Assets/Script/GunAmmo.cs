@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GunAmmo : MonoBehaviour
 {
     public int magSize;
     public RocketController gun;
     private int _loadedAmmo;
+    public UnityEvent loadedAmmoChanged;
+    public AudioSource rocketReloadSound;
     public int loadedAmmo
     {
         get => _loadedAmmo;
         set
         {
             _loadedAmmo = value;
+            loadedAmmoChanged.Invoke();
             if (_loadedAmmo <= 0) LockShooting();
             else UnlockShooting();
         }
@@ -30,6 +34,7 @@ public class GunAmmo : MonoBehaviour
         LockShooting();
         RefillAmmo();
         Debug.Log($"ammo: {loadedAmmo}");
+        rocketReloadSound.Play();
     }
     void Start()
     {

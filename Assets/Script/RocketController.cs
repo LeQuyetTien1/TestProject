@@ -8,6 +8,7 @@ public class RocketController : MonoBehaviour
     public GameObject flyRocket;
     public GunAmmo gunAmmo;
     private float time = 0;
+    public AudioSource rocketShootSound;
     void Update()
     {
         ShootRocket();
@@ -21,6 +22,7 @@ public class RocketController : MonoBehaviour
             time = 0;
             BulletSpawn();
             gunAmmo.SingleFireAmmoCounter();
+            rocketShootSound.Play();
         }
     }
     public void Reload()
