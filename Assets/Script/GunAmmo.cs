@@ -9,7 +9,7 @@ public class GunAmmo : MonoBehaviour
     public RocketController gun;
     private int _loadedAmmo;
     public UnityEvent loadedAmmoChanged;
-    public AudioSource rocketReloadSound;
+    public AudioSource reloadSound;
     public int loadedAmmo
     {
         get => _loadedAmmo;
@@ -26,20 +26,17 @@ public class GunAmmo : MonoBehaviour
     public void SingleFireAmmoCounter()
     {
         loadedAmmo--;
-        Debug.Log($"ammo: {loadedAmmo}");
     }
     private void RefillAmmo() => loadedAmmo = magSize;
     private void Reload()
     {
         LockShooting();
         RefillAmmo();
-        Debug.Log($"ammo: {loadedAmmo}");
-        rocketReloadSound.Play();
+        reloadSound.Play();
     }
     void Start()
     {
         RefillAmmo();
-        Debug.Log($"ammo: {loadedAmmo}");
     }
 
     void Update()

@@ -1,16 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AutomaticShooting : MonoBehaviour
 {
+    public GameObject muzzlePrefab;
+    public GameObject muzzlePosition;
+
     public int rpm;
     public AudioSource shootSound;
     private float lastShot;
     private float interval;
+    public GameObject hitMarkerPrefab;
+    public Camera aimingCamera;
+    public LayerMask layerMark;
     private void Start()
     {
-        interval = 60 / rpm;
+        interval = 60f / rpm;
     }
     private void Update()
     {
@@ -29,7 +36,17 @@ public class AutomaticShooting : MonoBehaviour
     }
     private void Shoot()
     {
-        Debug.Log("Shoot");
         shootSound.Play();
+        PerformRaycasting();
+        Instantiate(muzzlePrefab, muzzlePosition.transform.position, muzzlePosition.transform.rotation);
+    }
+    private void PerformRaycasting()
+    {
+        Ray aimingRay = new Ray(aimingCamera.transform.position, aimingCamera.transform.forward);
+        if(Physics.Raycast(aimingRay, out RaycastHit hitInfor, 1000f, layerMark))
+        {
+            Quaternion effectRotation = Quaternion.LookRotation(hitInfor.normal);
+            Instantiate(hitMarkerPrefab, hitInfor.point, effectRotation);
+        }
     }
 }

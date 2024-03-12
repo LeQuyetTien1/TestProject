@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -407,7 +407,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 271.03687, y: 105.49132}
+  m_AnchoredPosition: {x: 405, y: 171}
   m_SizeDelta: {x: 107.9263, y: 51.0174}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &433643134
@@ -627,13 +627,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1481151843}
     m_Modifications:
+    - target: {fileID: 2564390944558023418, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3960879644723491920, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
       propertyPath: m_Name
       value: Assault_Rifle_M4
       objectReference: {fileID: 0}
     - target: {fileID: 3960879644723491920, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3960879644723491920, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4448447718370701034, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
       propertyPath: m_RootOrder
@@ -686,6 +694,14 @@ PrefabInstance:
     - target: {fileID: 7981648180587831684, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
       propertyPath: m_PlayOnAwake
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981648180587831685, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981648180778114324, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3960879644723491922, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
@@ -841,6 +857,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1802767607664207933, guid: f26add0b8561051438426890f3bd0f19, type: 3}
   m_PrefabInstance: {fileID: 1737578515}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1321780110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7981648180778114324, guid: 9c32f2e3b18a3a94fa0cb90a4ac1c2fd, type: 3}
+  m_PrefabInstance: {fileID: 818205595}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1481151842
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,7 +871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1481151843}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CameraHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -885,7 +906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1496007144}
   - component: {fileID: 1496007146}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -957,6 +978,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1481151843}
     m_Modifications:
+    - target: {fileID: 1802767607664207933, guid: f26add0b8561051438426890f3bd0f19, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643882368892340086, guid: f26add0b8561051438426890f3bd0f19, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643882368974582393, guid: f26add0b8561051438426890f3bd0f19, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3643882369342148042, guid: f26add0b8561051438426890f3bd0f19, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1014,6 +1047,10 @@ PrefabInstance:
       value: Rocket Launcher
       objectReference: {fileID: 0}
     - target: {fileID: 4490302565791019165, guid: f26add0b8561051438426890f3bd0f19, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490302565791019165, guid: f26add0b8561051438426890f3bd0f19, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1023,7 +1060,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3643882369342148042, guid: f26add0b8561051438426890f3bd0f19, type: 3}
-    - {fileID: 2205214468985690845, guid: f26add0b8561051438426890f3bd0f19, type: 3}
     - {fileID: 4490302565791019162, guid: f26add0b8561051438426890f3bd0f19, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f26add0b8561051438426890f3bd0f19, type: 3}
 --- !u!1 &1756281550
@@ -1041,7 +1077,7 @@ GameObject:
   - component: {fileID: 1756281552}
   - component: {fileID: 1756281551}
   - component: {fileID: 1756281557}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1061,8 +1097,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angleOverDistance: 10
-  minPitch: -80
-  maxPitch: 80
+  minPitch: -45
+  maxPitch: 45
   cameraHolder: {fileID: 1481151843}
 --- !u!114 &1756281552
 MonoBehaviour:
@@ -1579,7 +1615,7 @@ MonoBehaviour:
   loadedAmmoChanged:
     m_PersistentCalls:
       m_Calls: []
-  rocketReloadSound: {fileID: 0}
+  reloadSound: {fileID: 0}
 --- !u!82 &1967256559
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1721,8 +1757,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 543b1049acf3c1e4dac3530ab940b73c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rpm: 60
+  muzzlePrefab: {fileID: 1336949550903370, guid: 4543ab5e3d405ec40a8d4e9aa5165030, type: 3}
+  muzzlePosition: {fileID: 1321780110}
+  rpm: 600
   shootSound: {fileID: 2121273409}
+  hitMarkerPrefab: {fileID: 100006, guid: 94a130fb17f1cae4388a8fe1d8bd3055, type: 3}
+  aimingCamera: {fileID: 1496007146}
+  layerMark:
+    serializedVersion: 2
+    m_Bits: 55
 --- !u!82 &2121273409
 AudioSource:
   m_ObjectHideFlags: 0
