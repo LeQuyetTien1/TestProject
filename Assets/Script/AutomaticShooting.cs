@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class AutomaticShooting : MonoBehaviour
+public class AutomaticShooting : Shooting
 {
     public GameObject muzzlePrefab;
     public GameObject muzzlePosition;
@@ -15,6 +15,7 @@ public class AutomaticShooting : MonoBehaviour
     public GameObject hitMarkerPrefab;
     public Camera aimingCamera;
     public LayerMask layerMark;
+    public GunAmmo gunAmmo;
     private void Start()
     {
         interval = 60f / rpm;
@@ -45,6 +46,7 @@ public class AutomaticShooting : MonoBehaviour
         Ray aimingRay = new Ray(aimingCamera.transform.position, aimingCamera.transform.forward);
         if(Physics.Raycast(aimingRay, out RaycastHit hitInfor, 1000f, layerMark))
         {
+            gunAmmo.SingleFireAmmoCounter();
             Quaternion effectRotation = Quaternion.LookRotation(hitInfor.normal);
             Instantiate(hitMarkerPrefab, hitInfor.point, effectRotation);
         }

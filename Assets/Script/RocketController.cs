@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RocketController : MonoBehaviour
+public class RocketController : Shooting
 {
     public GameObject rocket;
     public GameObject flyRocket;

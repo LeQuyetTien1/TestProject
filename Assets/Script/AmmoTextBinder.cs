@@ -9,7 +9,13 @@ public class AmmoTextBinder : MonoBehaviour
     public GunAmmo gunAmmo;
     private void Start()
     {
+        gunAmmo = FindAnyObjectByType<GunAmmo>();
         gunAmmo.loadedAmmoChanged.AddListener(UpdateAmmo);
+        UpdateAmmo();
+    }
+    private void Update()
+    {
+        gunAmmo = FindAnyObjectByType<GunAmmo>();
         UpdateAmmo();
     }
     private void UpdateAmmo()
