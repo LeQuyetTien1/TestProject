@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,13 +13,12 @@ public class AutomaticShooting : Shooting
     public AudioSource shootSound;
     private float lastShot;
     private float interval;
-    public GameObject hitMarkerPrefab;
-    public Camera aimingCamera;
-    public LayerMask layerMark;
     public GunAmmo gunAmmo;
+    public UnityEvent onShoot;
     private void Start()
     {
         interval = 60f / rpm;
+        onShoot.AddListener(FindAnyObjectByType<GunRaycaster>().PerformRaycasting);
     }
     private void Update()
     {
@@ -38,17 +38,8 @@ public class AutomaticShooting : Shooting
     private void Shoot()
     {
         shootSound.Play();
-        PerformRaycasting();
         Instantiate(muzzlePrefab, muzzlePosition.transform.position, muzzlePosition.transform.rotation);
-    }
-    private void PerformRaycasting()
-    {
-        Ray aimingRay = new Ray(aimingCamera.transform.position, aimingCamera.transform.forward);
-        if(Physics.Raycast(aimingRay, out RaycastHit hitInfor, 1000f, layerMark))
-        {
-            gunAmmo.SingleFireAmmoCounter();
-            Quaternion effectRotation = Quaternion.LookRotation(hitInfor.normal);
-            Instantiate(hitMarkerPrefab, hitInfor.point, effectRotation);
-        }
+        gunAmmo.SingleFireAmmoCounter();
+        onShoot.Invoke();
     }
 }

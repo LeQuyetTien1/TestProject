@@ -163,8 +163,9 @@ MonoBehaviour:
   flyingSpeed: 10
   rigidbody: {fileID: 91128310120046435}
   explosion: {fileID: 1764654978243476, guid: 72cfdc7df87c63345b26785504d8599b, type: 3}
-  explosionRadius: 2
-  explosionForce: 10
+  explosionRadius: 3
+  explosionForce: 15
+  damage: 5
 --- !u!1001 &4483190134865152260
 PrefabInstance:
   m_ObjectHideFlags: 0
