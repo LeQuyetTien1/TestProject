@@ -10,6 +10,7 @@ public class RocketBullet : MonoBehaviour
     public float explosionRadius;
     public float explosionForce;
     public int damage;
+    private List<Health> oldVictims = new List<Health>();
     
     void Update()
     {
@@ -23,6 +24,7 @@ public class RocketBullet : MonoBehaviour
     }
     private void BlowObjects()
     {
+        oldVictims.Clear();
         Collider[] affectedObjects = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach(var affectedObject in affectedObjects)
         {
@@ -32,10 +34,11 @@ public class RocketBullet : MonoBehaviour
     }
     private void DeliverDamage(Collider victim)
     {
-        Health victimHealth= victim.GetComponent<Health>();
-        if(victimHealth != null )
+        Health health= victim.GetComponentInParent<Health>();
+        if(health != null && !oldVictims.Contains(health))
         {
-            victimHealth.TakeDamage(damage);
+            health.TakeDamage(damage);
+            oldVictims.Add(health);
         }
     }
     private void AddForceToObject(Collider victim)
