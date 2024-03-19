@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class HitSurface : MonoBehaviour
 {
-    public HitSurfacetype surfaceType;
+    public HitSurfaceType surfaceType;
 }

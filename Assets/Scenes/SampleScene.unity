@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3184,7 +3184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abcd9cbe06c911442a8759dcd3b0f88c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitMarkerPrefab: {fileID: 100006, guid: 94a130fb17f1cae4388a8fe1d8bd3055, type: 3}
   aimingCamera: {fileID: 1496007146}
   layerMark:
     serializedVersion: 2
