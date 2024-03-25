@@ -67,6 +67,7 @@
     <Compile Include="Assets\JMO Assets\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\WFX_Demo_Wall.cs" />
+    <Compile Include="Assets\Script\Enemy\ZombieMovement.cs" />
     <Compile Include="Assets\Script\Player\MoveByKey.cs" />
     <Compile Include="Assets\Script\Player\RotateByMouse.cs" />
     <Compile Include="Assets\SMC Pack 1\Demo\DemoAssets\V_SMC_Handler.cs" />
@@ -79,10 +80,12 @@
     <Compile Include="Assets\Script\Enemy\RagdollSwitcher.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\WFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Scripts\WFX_LightFlicker.cs" />
+    <Compile Include="Assets\Script\GameFlow.cs" />
+    <Compile Include="Assets\Script\Enemy\ZombieAttack.cs" />
     <Compile Include="Assets\Script\Gun\Rocket\DestroyExplosion.cs" />
     <Compile Include="Assets\Script\Gun\Rocket\RocketBullet.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_Demo_Translate.cs" />
-    <Compile Include="Assets\Script\Enemy\Health.cs" />
+    <Compile Include="Assets\Script\Health.cs" />
     <Compile Include="Assets\Script\UI\AmmoTextBinder.cs" />
     <Compile Include="Assets\Script\Gun\GunAmmo.cs" />
     <Compile Include="Assets\Script\Gun\Shooting.cs" />
@@ -90,7 +93,6 @@
     <Compile Include="Assets\SMC Pack 1\Demo\DemoAssets\V_SMC_Camera.cs" />
     <Compile Include="Assets\Script\Gun\Rifle\GunRaycaster.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
-    <Compile Include="Assets\Script\Enemy\ZombieMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
