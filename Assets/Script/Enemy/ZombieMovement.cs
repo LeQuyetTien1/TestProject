@@ -52,5 +52,7 @@ public class ZombieMovement : MonoBehaviour
         anim.SetTrigger("Die");
         /*gameObject.GetComponent<NavMeshAgent>().enabled = false;*/
         agent.isStopped = true;
+        var zombieMovement = GetComponent<ZombieMovement>();
+        zombieMovement.enabled = false;
     }
 }

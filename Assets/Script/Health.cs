@@ -6,18 +6,30 @@ using UnityEngine.Events;
 public class Health : MonoBehaviour
 {
     public int maxHealthPoint;
-    /*public Animator anim;*/
-    private int healthPoint;
     public UnityEvent onDie;
-    private bool IsDead => healthPoint <= 0;
+    public UnityEvent<int, int> onHealthChanged;
+    public UnityEvent onTakeDamage;
+
+    private int _healthPointValue;
+    public int HealthPoint
+    {
+        get => _healthPointValue;
+        set
+        {
+            _healthPointValue = value;
+            onHealthChanged.Invoke(_healthPointValue, maxHealthPoint);
+        }
+    }
+    private bool IsDead => HealthPoint <= 0;
     private void Start()
     {
-        healthPoint = maxHealthPoint;
+        HealthPoint = maxHealthPoint;
     }
     public void TakeDamage(int damage)
     {
         if (IsDead) return;
-        healthPoint -= damage;
+        HealthPoint -= damage;
+        onTakeDamage.Invoke();
         if(IsDead)
         {
             Die();
@@ -25,7 +37,6 @@ public class Health : MonoBehaviour
     }
     private void Die()
     {
-        /*anim.SetTrigger("Die");*/
         onDie.Invoke();
     }
         

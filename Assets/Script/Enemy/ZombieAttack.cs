@@ -10,9 +10,17 @@ public class ZombieAttack : MonoBehaviour
 
     public void StartAttack() => anim.SetBool("IsAttacking", true);
     public void StopAttack() => anim.SetBool("IsAttacking", false);
-    public void OnAttack()
+    public void OnAttack(int index)
     {
         Debug.Log("Attacking Player");
-        playerHealth.TakeDamage(damage);       
+        playerHealth.TakeDamage(damage);
+        if (index == 1)
+        {
+            Player.Instance.playerUI.ShowLeftScratch();
+        }
+        else
+        {
+            Player.Instance.playerUI.ShowRightScratch();
+        }
     }
 }
